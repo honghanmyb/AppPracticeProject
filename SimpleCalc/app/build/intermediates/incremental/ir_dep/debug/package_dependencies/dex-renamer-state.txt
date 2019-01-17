@@ -1,0 +1,4 @@
+#Wed Jan 16 22:35:56 EST 2019
+base.0=G\:\\U of T\\Winter2019\\ECE1778\\Projects\\AppPracticeProject\\SimpleCalc\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex
