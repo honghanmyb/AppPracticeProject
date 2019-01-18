@@ -20,6 +20,14 @@
     <string name="sameday_text">Same day messager service.</string>
     <string name="nextday_text">Next day groud service.</string>
     <string name="pickup_text">Pick up.</string>
+    <string name="action_contact">Contact</string>
+    <string name="action_order">Order</string>
+    <string name="action_status">Status</string>
+    <string name="action_favorites">Favorites</string>
+    <string name="action_order_message">You select order</string>
+    <string name="action_status_message">You select status</string>
+    <string name="action_favorites_message">You select favorites</string>
+    <string name="action_contact_message">You select contact</string>
 
     <string-array name="labels_array">
         <item>Home</item>
