@@ -28,6 +28,7 @@
     <string name="action_status_message">You select status</string>
     <string name="action_favorites_message">You select favorites</string>
     <string name="action_contact_message">You select contact</string>
+    <string name="title_activity_order">Order Activity</string>
 
     <string-array name="labels_array">
         <item>Home</item>
