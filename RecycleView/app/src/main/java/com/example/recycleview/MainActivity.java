@@ -4,13 +4,19 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.LinkedList;
 
+public class MainActivity extends AppCompatActivity {
+    private  final LinkedList<String> mWordList = new LinkedList<>();
+    private RecyclerView mRecycleView;
+    private WordListAdapter mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +28,21 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                int wordListSize = mWordList.size();
+                mWordList.addLast("word" + wordListSize);
+                mRecycleView.getAdapter().notifyItemInserted(wordListSize);
+                mRecycleView.smoothScrollToPosition(wordListSize);
             }
         });
+
+        for(int i = 0; i < 20; i++){
+            mWordList.addLast("word" + i);
+        }
+
+        mRecycleView = findViewById(R.id.recycleView);
+        mAdapter = new WordListAdapter(this, mWordList);
+        mRecycleView.setAdapter(mAdapter);
+        mRecycleView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
